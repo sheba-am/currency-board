@@ -50,8 +50,7 @@ export default function CurrenciesPage() {
                 <img src={currency.image} alt={currency.name} width={40} height={40} className="mb-2" />
                 <h5>{currency.name} ({currency.symbol.toUpperCase()})</h5>
                 <p className="mb-1">💰 ${currency.current_price}</p>
-                <p className="text-muted small">Last updated: {currency.last_updated}</p>
-
+                <p className="text-muted small"> Last updated: {ConvertDatetToPerisan(currency.last_updated)}</p>
 
               </div>
             </div>

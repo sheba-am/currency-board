@@ -12,6 +12,8 @@
     "axios": "^1.8.4",
     "bootstrap": "5.3",
     "dayjs": "^1.11.13",
+    "jalaali-js": "^1.2.8",
+    "jalali-dayjs": "^0.0.1",
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
