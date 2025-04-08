@@ -3,11 +3,11 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Image from "next/image";
-import heroImage from "@/public/hero-image.png"; // Make sure this path and image exist
+import heroImage from "@/public/hero-image.png"; 
 
 const HeroSection = () => {
   return (
-    <section className="py-5 bg-light">
+    <section className="py-5 ">
       <Container>
         <Row className="align-items-center">
           {/* Text Side */}
