@@ -48,7 +48,7 @@ export default function FeaturesSection() {
                 />
                 <div className="text-start">
                   <h5 className="mb-1">{feature.title}</h5>
-                  <p className="text-muted small mb-0">{feature.description}</p>
+                  <p className=" d-none d-md-flex text-muted small mb-0">{feature.description}</p>
                 </div>
               </div>
             </Col>

@@ -1,4 +1,3 @@
-
 import { Carousel, Container } from 'react-bootstrap';
 import Image from 'next/image';
 import slide1 from '../public/slider-1.png';
@@ -17,13 +16,24 @@ export default function ImageSlider() {
         >
           {[slide1, slide2, slide3].map((slide, idx) => (
             <Carousel.Item key={idx}>
-              <div className="position-relative">
-                <Image
-                  src={slide}
-                  alt={`Slide ${idx + 1}`}
-                  className="d-block w-100 rounded"
-                  style={{ height: '450px', objectFit: 'cover', opacity: 0.6 }}
-                />
+              <div>
+                {/* Mobile captions: Always above the image */}
+                <div className="d-block d-md-none text-center mb-3">
+                  <h3>Slide Title {idx + 1}</h3>
+                  <p>Some text describing the slide.</p>
+                </div>
+
+                {/* Image: Follows the mobile captions */}
+                <div>
+                  <Image
+                    src={slide}
+                    alt={`Slide ${idx + 1}`}
+                    className="d-block w-100 rounded"
+                    style={{ height: '450px', objectFit: 'cover', opacity: 0.6 }}
+                  />
+                </div>
+
+                {/* Desktop captions: Overlaid on the image */}
                 <div className="carousel-caption d-none d-md-block">
                   <h3>Slide Title {idx + 1}</h3>
                   <p>Some text describing the slide.</p>

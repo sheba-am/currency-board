@@ -1,5 +1,3 @@
-// components/InfoImageSection.jsx
-
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Image from 'next/image';
 import infoImg from '../public/info-image-1.png'; 
@@ -28,9 +26,11 @@ export default function InfoImageSection() {
             <p className="text-muted mb-4">
                 We have designed our app for increased efficiency and it will help you to start getting more things done.
             </p>
-            <Button variant="secondary">
-              Learn More <IoIosArrowForward  className="ms-2" />
-            </Button>
+            <div className='d-flex justify-content-end'>
+              <Button variant="secondary">
+                Learn More <IoIosArrowForward  className="ms-2" />
+              </Button>
+            </div>
           </Col>
         </Row>
       </Container>

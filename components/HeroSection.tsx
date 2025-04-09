@@ -1,5 +1,3 @@
-// components/HeroSection.js
-
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Image from "next/image";
@@ -16,9 +14,9 @@ const HeroSection = () => {
             <p className="lead text-secondary">
               Get real-time updates on currencies.
             </p>
-            <div className="d-flex gap-3 mt-4">
-              <Button variant="primary" size="lg">Get Started</Button>
-              <Button variant="outline-secondary" size="lg">Learn More</Button>
+            <div className="d-flex flex-column flex-md-row gap-2 mt-3">
+              <Button variant="primary" className="w-100 w-md-auto">Get Started</Button>
+              <Button variant="outline-secondary" className="w-100 w-md-auto">Learn More</Button>
             </div>
           </Col>
 
