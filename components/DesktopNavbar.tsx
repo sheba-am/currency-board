@@ -7,7 +7,7 @@ export default function DesktopNavbar() {
     <Navbar expand="lg" className=" py-3 d-none d-md-flex">
       <Container>
         {/* Left: Logo */}
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="/">
         <Image
               src={logoImg}
               alt="logo Section"

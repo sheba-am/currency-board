@@ -69,3 +69,19 @@ a {
 .accordion-button::after {
   display: none;
 }
+
+.custom-table-bg {
+  background-color: #808080 ;
+  border-radius: 10px;
+  color: white;
+}
+
+
+.custom-table-bg thead,
+.custom-table-bg tbody,
+.custom-table-bg tr,
+.custom-table-bg td,
+.custom-table-bg th {
+  background-color: transparent;
+  color: black;
+}
