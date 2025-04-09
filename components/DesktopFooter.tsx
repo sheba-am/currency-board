@@ -1,4 +1,3 @@
-
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Image from 'next/image';
 import logoImg from '@/public/logo.png';
@@ -6,9 +5,9 @@ import instagramIcon from '@/public/instagram-icon.png';
 import twitterIcon from '@/public/twitter-icon.png';
 import facebookIcon from '@/public/facebook-icon.png';
 
-export default function Footer() {
+export default function DesktopFooter() {
   return (
-    <footer className="text-dark pt-5 pb-3">
+    <footer className="text-dark pt-5 pb-3 d-none d-md-flex">
       <Container>
         <Row className="mb-4">
           {/* Left: Logo + Mode Toggle */}

@@ -58,6 +58,12 @@ a {
   bottom: 20%;
 }
 
+
+.btn-link {
+  text-decoration: none; /* Removes the underline from button link variants */
+}
+
+
 /* ========= FAQ Styling =============== */
 /* hide the defualt accordion button */
 .accordion-button::after {

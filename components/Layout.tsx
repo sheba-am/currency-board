@@ -2,6 +2,10 @@ import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import MobileNavbar from './MobileNavbar';
+import DesktopNavbar from './DesktopNavbar';
+import DesktopFooter from './DesktopFooter';
+import MobileFooter from './MobileFooter';
 
 type LayoutProps = {
   children: ReactNode;
@@ -16,9 +20,12 @@ export default function Layout({ children, title = 'Frontend Dev Task' }: Layout
         <meta name="description" content="Currency project with CoinGecko API" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Navbar />
+      
+      <MobileNavbar />
+      <DesktopNavbar />
       <main className="container my-4">{children}</main>
-      <Footer />
+      <DesktopFooter />
+      <MobileFooter />
     </>
   );
 }

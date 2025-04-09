@@ -1,11 +1,10 @@
-
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import Image from 'next/image';
 import logoImg from '@/public/logo.png'; 
 
-export default function MainNavbar() {
+export default function DesktopNavbar() {
   return (
-    <Navbar expand="lg" className=" py-3">
+    <Navbar expand="lg" className=" py-3 d-none d-md-flex">
       <Container>
         {/* Left: Logo */}
         <Navbar.Brand href="#">
@@ -16,7 +15,7 @@ export default function MainNavbar() {
         </Navbar.Brand>
 
         {/* Middle: Nav Links */}
-        <Nav className="mx-auto">
+        <Nav className="ms-2">
           <Nav.Link href="#pricing" className="mx-2">Pricing</Nav.Link>
           <Nav.Link href="#how-it-works" className="mx-2">How it Works</Nav.Link>
           <Nav.Link href="#faq" className="mx-2">FAQ</Nav.Link>

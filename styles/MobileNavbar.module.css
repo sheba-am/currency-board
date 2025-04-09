@@ -1,0 +1,38 @@
+
+.fullscreenMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: white; /* or use var(--bs-dark) */
+  color: black;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+/* This class makes the menu visible */
+.fullscreenMenu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.navLink {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: gray;
+}
