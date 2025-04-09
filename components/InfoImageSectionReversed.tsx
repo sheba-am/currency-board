@@ -13,9 +13,9 @@ export default function InfoImageSectionReversed() {
         <Row className="align-items-center">
           {/* Text on the Left */}
           <Col md={6}>
-            <h2 className="fw-bold mb-3">Your Trusted Market Companion</h2>
+            <h2 className="fw-bold mb-3">info second</h2>
             <p className="text-muted mb-4">
-              Track currencies, compare values, and make smart moves with our streamlined dashboards.
+                We have designed our app for increased efficiency and it will help you to start getting more things done.
             </p>
             <Button variant="secondary">
               Learn More <IoIosArrowForward className="ms-2" />

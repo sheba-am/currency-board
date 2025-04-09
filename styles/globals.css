@@ -40,3 +40,26 @@ a {
     color-scheme: dark;
   }
 }
+
+
+/* ========= Carasoul Styling =============== */
+.custom-carousel .carousel-item {
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.custom-carousel .carousel-item-next,
+.custom-carousel .carousel-item-prev,
+.custom-carousel .carousel-item.active {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-carousel .carousel-caption {
+  bottom: 20%;
+}
+
+/* ========= FAQ Styling =============== */
+/* hide the defualt accordion button */
+.accordion-button::after {
+  display: none;
+}
