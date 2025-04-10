@@ -23,7 +23,7 @@ export default function Layout({ children, title = 'Frontend Dev Task' }: Layout
       
       <MobileNavbar />
       <DesktopNavbar />
-      <main className="container my-4">{children}</main>
+      <main className=" mb-4">{children}</main>
       <DesktopFooter />
       <MobileFooter />
     </>
