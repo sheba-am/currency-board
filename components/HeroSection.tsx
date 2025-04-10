@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Image from "next/image";
 import heroImage from "@/public/hero-image.png"; 
+import { IoIosArrowForward } from "react-icons/io";
 
 const HeroSection = () => {
   return (
@@ -15,8 +16,8 @@ const HeroSection = () => {
               Get real-time updates on currencies.
             </p>
             <div className="d-flex flex-column flex-md-row gap-2 mt-3">
-              <Button variant="primary" className="w-100 w-md-auto">Get Started</Button>
-              <Button variant="outline-secondary" className="w-100 w-md-auto">Learn More</Button>
+              <Button variant="primary" className="w-100 w-md-auto">Get Started <IoIosArrowForward  className="ms-2" /></Button>
+              <Button variant="secondary" className="w-100 w-md-auto">Learn More</Button>
             </div>
           </Col>
 

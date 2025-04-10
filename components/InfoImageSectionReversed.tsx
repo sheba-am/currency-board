@@ -27,7 +27,7 @@ export default function InfoImageSectionReversed() {
               We have designed our app for increased efficiency and it will help you to start getting more things done.
             </p>
             <div className="d-flex justify-content-end">
-              <Button variant="secondary">
+              <Button variant="tertiary">
                 Learn More <IoIosArrowForward className="ms-2" />
               </Button>
             </div>

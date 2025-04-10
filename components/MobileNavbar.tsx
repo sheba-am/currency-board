@@ -42,7 +42,7 @@ export default function MobileNavbar() {
 
         <div className="position-absolute bottom-0 w-100 p-4 text-center">
           <Button variant="primary" className="w-100 mb-2">Get Started</Button>
-          <Button variant="secondary" className="w-100">Sign In</Button>
+          <Button variant="tertiary" className="w-100">Sign In</Button>
         </div>
       </div>
     </div>

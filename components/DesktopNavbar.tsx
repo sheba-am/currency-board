@@ -24,8 +24,8 @@ export default function DesktopNavbar() {
 
         {/* Right: Buttons */}
         <div className="d-flex">
-          <Button variant="outline-primary" className="me-2">Sign In</Button>
-          <Button variant="primary">Get Started</Button>
+          <Button variant="tertiary" className="me-2">Sign In</Button>
+          <Button variant="primary-2">Get Started</Button>
         </div>
       </Container>
     </Navbar>

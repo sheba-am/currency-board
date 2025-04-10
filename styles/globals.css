@@ -70,6 +70,8 @@ a {
   display: none;
 }
 
+
+/* ========= Table Styling =============== */
 .custom-table-bg {
   background-color: #808080 ;
   border-radius: 10px;
@@ -85,3 +87,193 @@ a {
   background-color: transparent;
   color: black;
 }
+
+/* ========= primary button Styling =============== */
+
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 32px;
+  background-color: #08C056;
+  border: none;
+  border-radius: 32px;
+  color: #F7FAFC;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+
+.btn-primary:active {
+  background-color: #059043;
+}
+
+.btn-primary .icon {
+  width: 16px;
+  height: 16px;
+  background: #F7FAFC;
+  mask: url('/icons/arrow-forward.svg') no-repeat center;
+  -webkit-mask: url('/icons/arrow-forward.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  transform: scaleX(-1); /* mirror the icon if needed */
+}
+
+.btn-primary:hover {
+  background-color: #65E69C;
+  box-shadow: 0px 0px 8px rgba(101, 229, 156, 0.25);
+  color: #07813B;
+}
+
+.btn-primary:hover .icon {
+  background-color: #07813B;
+}
+
+/* ========= primary button 2 Styling =============== */
+/* Primary Button 2 Enabled */
+.btn-primary-2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 32px;
+  background-color: #2140D4;
+  border: none;
+  border-radius: 32px;
+  color: #F7FAFC;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-2 .icon {
+  width: 16px;
+  height: 16px;
+  background-color: #F7FAFC;
+  mask: url('/icons/arrow-forward.svg') no-repeat center;
+  -webkit-mask: url('/icons/arrow-forward.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  transform: scaleX(-1);
+}
+
+/* Primary Button 2 Hovered */
+.btn-primary-2:hover {
+  background-color: #65BBE6;
+  box-shadow: 0px 0px 8px rgba(101, 187, 229, 0.25);
+  color: #5A89FF;
+}
+
+.btn-primary-2:hover .icon {
+  background-color: #5A89FF;
+}
+
+
+/* Secondary Button Enabled */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 32px;
+  background-color: transparent;
+  border: 1px solid #BED0FF;
+  border-radius: 32px;
+  color: #2140D4;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Icon inside the button */
+.btn-secondary .icon {
+  width: 16px;
+  height: 16px;
+  background-color: #2140D4;
+  mask: url('/icons/arrow-forward.svg') no-repeat center;
+  -webkit-mask: url('/icons/arrow-forward.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  transform: scaleX(-1);
+}
+
+/* Secondary Button Hovered */
+.btn-secondary:hover {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 32px;
+  background-color: transparent;
+  border: 1px solid #65BBE5;
+  filter: drop-shadow(0px 0px 8px rgba(101, 187, 229, 0.25));
+  border-radius: 32px;
+  color: #5A89FF;
+  transition: all 0.3s ease;
+}
+
+/* Icon inside the button */
+.btn-secondary:hover .icon {
+  background-color: #5A89FF;
+  transform: scaleX(-1);
+}
+
+/* ========= Tertiary Button Styling =============== */
+
+/* Tertiary Button Base */
+.btn-tertiary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 10px;
+
+  width: 223px;
+  height: 56px;
+  border-radius: 32px;
+
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #2140D4;
+  background: transparent;
+  border: none;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Hover State */
+.btn-tertiary:hover {
+  color: #5A89FF;
+  filter: drop-shadow(0px 0px 8px rgba(101, 187, 229, 0.25)); /* Shadow effect */
+}
+
+/* Icon Inside Button */
+.btn-tertiary .btn-icon {
+  width: 16px;
+  height: 16px;
+  background: #2140D4;
+  transform: scaleX(-1); /* Mirrors the icon */
+  transition: background-color 0.3s ease-in-out; /* Icon hover effect */
+}
+
+/* Icon Hover State */
+.btn-tertiary:hover .btn-icon {
+  background: #5A89FF; /* Change icon background on hover */
+}
+
+
