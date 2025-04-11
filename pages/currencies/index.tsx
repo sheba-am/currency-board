@@ -8,7 +8,8 @@ import { useRouter } from 'next/router';
 import { useCurrency } from '@/contexts/CurrencyContext';
 
 export default function CurrenciesPage() {
-    const [currencies, setCurrencies] = useState<Currency[]>([]);
+    //const [currencies, setCurrencies] = useState<Currency[]>([]);
+    const { currencies, setCurrencies } = useCurrency();
     const [page, setPage] = useState(1);
     const [loading, setLoading] = useState(false);
     const [hasMore, setHasMore] = useState(true);
@@ -18,52 +19,96 @@ export default function CurrenciesPage() {
     const observer = useRef<IntersectionObserver | null>(null);
     const sentinelRef = useRef<HTMLDivElement | null>(null);
     const fetchLockRef = useRef(false);
+    const fetchedPagesRef = useRef<Set<number>>(new Set());
+
 
     const { setSelectedCurrency } = useCurrency();
     const router = useRouter();
 
-    const fetchCurrencies = useCallback(async (pageNum: number) => {
-        if (fetchLockRef.current) return;
+    // const fetchCurrencies = useCallback(async (pageNum: number) => {
+    //     if (fetchLockRef.current) return;
 
+    //     setLoading(true);
+    //     fetchLockRef.current = true;
+
+    //     try {
+    //         const response = await axios.get(
+    //             `https://api.coingecko.com/api/v3/coins/markets`,
+    //             {
+    //                 params: {
+    //                     vs_currency: 'usd',
+    //                     per_page: 10, // Number of items per page
+    //                     page: pageNum,
+    //                 },
+    //             }
+    //         );
+
+    //         const newCurrencies = response.data;
+    //         setCurrencies(prev => [...prev, ...newCurrencies]);
+    //         setHasMore(newCurrencies.length > 0);
+
+    //         // Deactivate infinite scroll after page 4
+    //         if (pageNum >= 4) {
+    //             setInfiniteScrollActive(false);
+    //         }
+    //     } catch (error) {
+    //         console.error("Failed to fetch currencies:", error);
+    //         setError("Network error or rate limit reached. Try again later.");
+    //     } finally {
+    //         setLoading(false);
+    //         setTimeout(() => {
+    //             fetchLockRef.current = false;
+    //         }, 500);
+    //     }
+    // }, []);
+
+    const fetchCurrencies = useCallback(async (pageNum: number) => {
+        if (fetchLockRef.current || fetchedPagesRef.current.has(pageNum)) return;
+      
         setLoading(true);
         fetchLockRef.current = true;
-
+      
         try {
-            const response = await axios.get(
-                `https://api.coingecko.com/api/v3/coins/markets`,
-                {
-                    params: {
-                        vs_currency: 'usd',
-                        per_page: 10, // Number of items per page
-                        page: pageNum,
-                    },
-                }
-            );
-
-            const newCurrencies = response.data;
-            setCurrencies(prev => [...prev, ...newCurrencies]);
-            setHasMore(newCurrencies.length > 0);
-
-            // Deactivate infinite scroll after page 4
-            if (pageNum >= 4) {
-                setInfiniteScrollActive(false);
+          const response = await axios.get(
+            `https://api.coingecko.com/api/v3/coins/markets`,
+            {
+              params: {
+                vs_currency: 'usd',
+                per_page: 10,
+                page: pageNum,
+              },
             }
+          );
+      
+          const newCurrencies: Currency[] = response.data;
+          setCurrencies(prev => [...prev, ...newCurrencies]);
+          setHasMore(newCurrencies.length > 0);
+          fetchedPagesRef.current.add(pageNum);
+      
+          if (pageNum >= 4) {
+            setInfiniteScrollActive(false);
+          }
         } catch (error) {
-            console.error("Failed to fetch currencies:", error);
-            setError("Network error or rate limit reached. Try again later.");
+          console.error("Failed to fetch currencies:", error);
+          setError("Network error or rate limit reached. Try again later.");
         } finally {
-            setLoading(false);
-            setTimeout(() => {
-                fetchLockRef.current = false;
-            }, 500);
+          setLoading(false);
+          setTimeout(() => {
+            fetchLockRef.current = false;
+          }, 500);
         }
-    }, []);
-
+      }, [setCurrencies]);
+      
     // Fetch data when `page` changes
     useEffect(() => {
         fetchCurrencies(page);
     }, [page, fetchCurrencies]);
-
+    // useEffect(() => {
+    //     if (currencies.length === 0) {
+    //       fetchCurrencies(page);
+    //     }
+    //   }, [page, fetchCurrencies]);
+      
     // Infinite scroll logic
     useEffect(() => {
         if (!infiniteScrollActive || loading) return;
