@@ -1,0 +1,88 @@
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: #EDEDED;
+    padding: 2rem;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .closeButton {
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: black;
+  }
+  
+  .currencyRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+  
+  .currencyInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #23262F;
+  }
+  
+
+  
+  .symbol {
+    color: #777E90;
+  }
+  
+  .updated {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .priceRow {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+  }
+  
+  .usd {
+    color:#58BD7D;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      transform: scale(0.98);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

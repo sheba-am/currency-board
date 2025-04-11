@@ -4,14 +4,7 @@ import { ConvertDatetToPerisan } from '@/utils/ConvertDatetToPerisan';
 import CurrenciesHeroSection from '@/components/CurrenciesHeroSection';
 import { Container, Button } from 'react-bootstrap';
 
-type Currency = {
-  id: string;
-  name: string;
-  symbol: string;
-  image: string;
-  current_price: number;
-  last_updated: string;
-};
+import { Currency } from '@/types/Currency'; // Assuming you have this type
 
 export default function CurrenciesPage() {
   const [currencies, setCurrencies] = useState<Currency[]>([]);
