@@ -1,65 +1,81 @@
 /* Space between slides */
 .slideItem {
-    margin: 0 10px; /* Adjust the space as needed */
-  }
+  margin: 0 10px;
+  /* Adjust the space as needed */
+}
 
- /* Add this to your ImageSlider.module.css */
+/* Add this to your ImageSlider.module.css */
 .slideItem {
-    position: relative;
-  }
-  
-  .slideContent {
-    position: absolute;
-    top: 10px; /* Adjust positioning as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: white;
-    z-index: 1;
-  }
+  position: relative;
+}
 
-  /* Style for centering captions on top of images */
+.slideContent {
+  position: absolute;
+  top: 10px;
+  /* Adjust positioning as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  z-index: 1;
+}
+
+/* Style for centering captions on top of images */
 .captionOverlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    /* background-color: rgba(0, 0, 0, 0.5); Optional: Add background transparency for better readability */
-    padding: 10px; /* Optional: Add padding around text */
-    z-index: 2;
-  }
- 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: left;
+  transform: translate(-50%, -50%);
+  color: white;
+  /* background-color: rgba(0, 0, 0, 0.5); Optional: Add background transparency for better readability */
+  padding: 10px;
+  /* Optional: Add padding around text */
+  z-index: 2;
+}
 
-  
-  /* .slideImage {
+.captionTitle {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: -1%;
+
+}
+
+.captionDescription {
+  font-size: 20px;
+  font-weight: 300;
+
+  letter-spacing: -1%;
+
+}
+
+/* .slideImage {
     width: 100%;
     height: 450px;
     object-fit: cover;
   } */
-  
-  .slideImage {
-    border-radius: 56px; /* Radius for the image */
-    width: 816;
-    height: 432;
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-    filter: brightness(50%); /* Adjust the 50% for desired darkness */
-    transition: filter 0.5s ease-in-out; /* Smooth transition when necessary */
-  }
-  
-  
-  .carousel .control-arrow {
-    display: none; /* Hide the navigation arrows if not needed */
-  }
-  
-  .carousel .carousel-status {
-    display: none; /* Hide the 1 of 3 text */
-  }
-  
-  
 
-  
-  
+.slideImage {
+  border-radius: 56px;
+  /* Radius for the image */
+  width: 816;
+  height: 432;
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  filter: brightness(50%);
+  /* Adjust the 50% for desired darkness */
+  transition: filter 0.5s ease-in-out;
+  /* Smooth transition when necessary */
+}
+
+
+.carousel .control-arrow {
+  display: none;
+  /* Hide the navigation arrows if not needed */
+}
+
+.carousel .carousel-status {
+  display: none;
+  /* Hide the 1 of 3 text */
+}

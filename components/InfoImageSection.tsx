@@ -14,23 +14,26 @@ export default function InfoImageSection() {
               src={infoImg}
               alt="Info Section"
               className="rounded-circle"
-              width={350}
-              height={350}
-              style={{ objectFit: 'cover' }}
+              width={400}
+              height={400}
+              style={{ objectFit: 'cover', boxShadow: "-31px 3px 84px -37px #7737FF40" }}
             />
           </Col>
 
           {/* Text on the Right */}
           <Col md={6}>
-            <h2 className="fw-bold mb-3">Info Title 1</h2>
-            <p className="text-muted mb-4">
-                We have designed our app for increased efficiency and it will help you to start getting more things done.
-            </p>
-            <div className='d-flex justify-content-end'>
-              <Button variant="tertiary">
-                Learn More <IoIosArrowForward  className="ms-2" />
-              </Button>
-            </div>
+            <h2 className="fw-bold mb-3 main-purple">Revolutionize your workflow</h2>
+              {/* <div className='d-flex text-wrap w-100'> */}
+                <p className=" mb-4 info-description">
+                  We have designed our app for increased efficiency and it will help you to start getting more things done.
+                </p>
+              {/* </div> */}
+              <div className='d-flex justify-content-end'>
+                <Button variant="tertiary">
+                  Learn More <IoIosArrowForward   />
+                </Button>
+              </div>
+
           </Col>
         </Row>
       </Container>

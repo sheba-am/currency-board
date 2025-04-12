@@ -19,7 +19,9 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-family: Public Sans; */
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -42,38 +44,119 @@ a {
 }
 
 
-/* ========= Carasoul Styling =============== */
-/* .custom-carousel .carousel-item {
-  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+/* ========= Landing Page Styling =============== */
+
+.main-blue {
+  color: #2140D4 !important;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: -1%;
+
+
 }
 
-.custom-carousel .carousel-item-next,
-.custom-carousel .carousel-item-prev,
-.custom-carousel .carousel-item.active {
-  display: flex;
-  justify-content: center;
+
+
+.feature-section {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: -1%;
+  text-align: center;
 }
 
-.custom-carousel .carousel-caption {
-  bottom: 20%;
-} */
+.main-purple {
+  color: #7737FF;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: -1%;
 
+}
+
+.info-description {
+  color: #7E8186;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -1%;
+
+}
+
+.main-orange {
+  color: #FF9900;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: -1%;
+
+
+}
 
 .btn-link {
-  text-decoration: none; /* Removes the underline from button link variants */
+  text-decoration: none;
+  /* Removes the underline from button link variants */
 }
 
 
 /* ========= FAQ Styling =============== */
+
+.accordion {
+  background-color: #EDEDED;
+}
+
 /* hide the defualt accordion button */
 .accordion-button::after {
   display: none;
 }
 
+.accordion-item {
+  border-left: none;   /*Removes the border from accordion items */
+  border-right: none;   /*Removes the border from accordion items */
+  border-top: none;
+  background-color: #EDEDED;
+
+
+
+}
+
+.accordion-item .accordion-button {
+  /* border: none; */
+  /* Removes the button's border */
+  box-shadow: none;
+  /* Removes the default focus outline */
+  background-color: #EDEDED;
+
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #EDEDED;
+  color: black;
+}
+
+.custom-bg-gray {
+  background-color: #EDEDED;
+  border-radius: 56px;
+}
+@media (max-width: 768px) {
+  .custom-bg-gray {
+    border-radius: 0; /* Remove rounded edges */
+    width: 100vw; /* Full width */
+    padding-left: 0 ;
+    padding-right: 0 ;
+  }
+
+  .container {
+    max-width: 100%; /* Override Bootstrap's default margins */
+    padding-left: 0 ;
+    padding-right: 0 ;
+  }
+}
+
 
 /* ========= Table Styling =============== */
 .custom-table-bg {
-  background-color: #EDEDED ;
+  background-color: #EDEDED;
   border-radius: 10px;
   color: white;
 }
@@ -122,7 +205,8 @@ a {
   -webkit-mask: url('/icons/arrow-forward.svg') no-repeat center;
   mask-size: contain;
   -webkit-mask-size: contain;
-  transform: scaleX(-1); /* mirror the icon if needed */
+  transform: scaleX(-1);
+  /* mirror the icon if needed */
 }
 
 .btn-primary:hover {
@@ -253,13 +337,15 @@ a {
   color: #2140D4;
   background: transparent;
   border: none;
-  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+  transition: all 0.3s ease-in-out;
+  /* Smooth transition for hover effects */
 }
 
 /* Hover State */
 .btn-tertiary:hover {
   color: #5A89FF;
-  filter: drop-shadow(0px 0px 8px rgba(101, 187, 229, 0.25)); /* Shadow effect */
+  filter: drop-shadow(0px 0px 8px rgba(101, 187, 229, 0.25));
+  /* Shadow effect */
 }
 
 /* Icon Inside Button */
@@ -267,13 +353,16 @@ a {
   width: 16px;
   height: 16px;
   background: #2140D4;
-  transform: scaleX(-1); /* Mirrors the icon */
-  transition: background-color 0.3s ease-in-out; /* Icon hover effect */
+  transform: scaleX(-1);
+  /* Mirrors the icon */
+  transition: background-color 0.3s ease-in-out;
+  /* Icon hover effect */
 }
 
 /* Icon Hover State */
 .btn-tertiary:hover .btn-icon {
-  background: #5A89FF; /* Change icon background on hover */
+  background: #5A89FF;
+  /* Change icon background on hover */
 }
 
 
@@ -281,36 +370,52 @@ a {
 
 /* Adjust the positioning of the control dots */
 div.carousel .control-dots {
-  bottom: 10px; /* Place the dots 10px from the bottom of the carousel */
-  width: 100%; /* Ensure they span the width of the carousel */
+  bottom: 10px;
+  /* Place the dots 10px from the bottom of the carousel */
+  width: 100%;
+  /* Ensure they span the width of the carousel */
   display: flex;
-  justify-content: center; /* Center the dots horizontally */
-  gap: 2px; /* Space between dots (or lines if customized) */
-  z-index: 1; /* Ensure they're above the image */
+  justify-content: center;
+  /* Center the dots horizontally */
+  gap: 2px;
+  /* Space between dots (or lines if customized) */
+  z-index: 1;
+  /* Ensure they're above the image */
 }
 
 div.carousel .control-dots .dot {
 
-  width: 30px; /* Make them appear as lines */
+  width: 30px;
+  /* Make them appear as lines */
   height: 5px;
-  border-radius: 20px; /* Remove circular shape */
-  background-color: #575757; /* Default color */
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  border-radius: 20px;
+  /* Remove circular shape */
+  background-color: #575757;
+  /* Default color */
+  transition: background-color 0.3s ease;
+  /* Smooth hover effect */
 }
 
 div.carousel .control-dots .dot.selected {
-  background-color: #4F81FF; /* Highlight the active dot */  
-  width: 40px; /* Make them appear as lines */
+  background-color: #4F81FF;
+  /* Highlight the active dot */
+  width: 40px;
+  /* Make them appear as lines */
 
 }
+
 div.carousel .slider-wrapper {
-  margin-bottom: 40px; /*Add space  for the dots below the images */
+  margin-bottom: 40px;
+  /*Add space  for the dots below the images */
 
 }
+
 /* Add fade-out edges effect to the carousel */
 div.carousel .slider-wrapper {
-  position: relative; /* Ensure proper positioning for the pseudo-element */
-  overflow: hidden; /* Keep everything confined within the carousel */
+  position: relative;
+  /* Ensure proper positioning for the pseudo-element */
+  overflow: hidden;
+  /* Keep everything confined within the carousel */
 }
 
 div.carousel .slider-wrapper::before {
@@ -321,7 +426,61 @@ div.carousel .slider-wrapper::before {
   width: 100%;
   height: 100%;
   background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 1) 100%);
-  z-index: 1; /* Place the gradient on top */
-  pointer-events: none; /* Make sure interactions are still possible */
+  z-index: 1;
+  /* Place the gradient on top */
+  pointer-events: none;
+  /* Make sure interactions are still possible */
 }
 
+/* ========= Call To Action Styling =============== */
+
+.custom-bg-blue {
+  background-color: #BED0FF;
+  border-radius: 56px; /* Default for desktop */
+  background-image: url('../public/pattern.png');
+  background-blend-mode: multiply;
+  min-height: 400px;
+}
+
+/* Mobile View: Remove margins and make it full width */
+@media (max-width: 768px) {
+  .custom-bg-blue {
+    border-radius: 0; /* Remove rounded edges */
+    width: 100vw; /* Full width */
+    padding-left: 0 ;
+    padding-right: 0 ;
+  }
+
+  .container {
+    max-width: 100%; /* Override Bootstrap's default margins */
+    padding-left: 0 ;
+    padding-right: 0 ;
+  }
+}
+
+
+/* ========= Currencies Styling =============== */
+
+.custom-black-title {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: -1%;
+  color: #23262F;
+}
+
+.custom-black-des {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -1%;
+
+}
+
+.custom-black-bold-des {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -1%;
+
+}

@@ -16,7 +16,7 @@ export default function FAQSection() {
 
   return (
     <section className="py-5 ">
-      <Container className="text-center">
+      <Container className="text-center custom-bg-gray px-5 py-5">
         <h2 className="fw-bold mb-3">FAQ</h2>
         <p className="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
 
@@ -24,18 +24,18 @@ export default function FAQSection() {
           {[ 
             {
               key: "0", 
-              question: "What is this platform?",
-              answer: "We have designed our app for increased efficiency and it will help you to start getting more things done."
+              question: "Lorem ipsum dolor sit amet?",
+              answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             },
             {
               key: "1",
-              question: "What is this platform?",
-              answer: "We have designed our app for increased efficiency and it will help you to start getting more things done.."
+              question: "consectetur adipiscing elit?",
+              answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             },
             {
               key: "2",
-              question: "What is this platform?",
-              answer: "We have designed our app for increased efficiency and it will help you to start getting more things done.!"
+              question: "sed do eiusmod tempor incididunt ut labore et dolore?",
+              answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             }
           ].map(({ key, question, answer }) => (
             <Accordion.Item eventKey={key} key={key}>

@@ -14,16 +14,16 @@ export default function InfoImageSectionReversed() {
               src={infoImg2}
               alt="Info Section Reversed"
               className="rounded-circle"
-              width={350}
-              height={350}
-              style={{ objectFit: 'cover' }}
+              width={400}
+              height={400}
+              style={{ objectFit: 'cover', boxShadow: "-31px 3px 84px -37px #7737FF40" }}
             />
           </Col>
 
           {/* Text on the bottom for mobile, left for desktop */}
           <Col md={6} className="order-2 order-md-1">
-            <h2 className="fw-bold mb-3">info second</h2>
-            <p className="text-muted mb-4">
+            <h2 className="fw-bold mb-3 main-orange">Free template library included</h2>
+            <p className="info-description mb-4">
               We have designed our app for increased efficiency and it will help you to start getting more things done.
             </p>
             <div className="d-flex justify-content-end">

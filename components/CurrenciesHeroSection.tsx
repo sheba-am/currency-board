@@ -10,9 +10,9 @@ const CurrenciesHeroSection = () => {
         <Row className="align-items-center">
           {/* Text Side */}
           <Col md={6}>
-            <h1 className="display-4 fw-bold text-primary">Main header</h1>
-            <p className="lead text-secondary">
-              Get real-time updates on currencies.
+            <h1 className="custom-black-title fw-bold text-black mb-3">Today’s Cryptocurrency prices </h1>
+            <p className="lead custom-black-des">
+              The global crypto market cap is<span className="custom-black-bold-des "> $1.86T</span>
             </p>
           </Col>
 

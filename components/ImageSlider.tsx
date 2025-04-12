@@ -30,8 +30,8 @@ export default function ImageSlider() {
         {slides.map((slide, idx) => (
           <div key={idx} className={styles.slideItem}>
             <div className={styles.captionOverlay}>
-              <h3>Slide Title {idx + 1}</h3>
-              <p>Some text describing the slide.</p>
+              <h3 className={`{styles.captionTitle} mb-4` }>Risk-free 30 day trial to level up your team’s productivity.</h3>
+              <p className={styles.captionDescription}>Get started now and take advantage of our 30 day free trial today. No credit card required.  </p>
             </div>
             <Image
               src={slide}

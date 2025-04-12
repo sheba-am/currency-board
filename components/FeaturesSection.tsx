@@ -7,17 +7,17 @@ import feature3 from '@/public/feature-3.png';
 const features = [
   {
     img: feature1,
-    title: 'Feature One',
+    title: 'Transparent Pricing',
     description: 'Short description of feature one.',
   },
   {
     img: feature2,
-    title: 'Feature Two',
+    title: 'Easy Integrations',
     description: 'Short description of feature two.',
   },
   {
     img: feature3,
-    title: 'Feature Three',
+    title: 'Superb Efficiency',
     description: 'Short description of feature three.',
   },
 ];
@@ -27,11 +27,13 @@ export default function FeaturesSection() {
     <section className="py-5 text-center">
       <Container>
         {/* Title */}
-        <h2 className="fw-bold mb-3">Why Choose Us</h2>
+        <div className='d-flex justify-content-center feature-section'>
+          <h2 className="fw-bold mb-3">Get more done in <span className='text-green'>less time</span></h2>
+        </div>
 
         {/* Description */}
         <p className="text-muted mb-5">
-            Short description of feature.
+          Simple, fast, effortlessly.
         </p>
 
         {/* Features */}
@@ -48,7 +50,6 @@ export default function FeaturesSection() {
                 />
                 <div className="text-start">
                   <h5 className="mb-1">{feature.title}</h5>
-                  <p className=" d-none d-md-flex text-muted small mb-0">{feature.description}</p>
                 </div>
               </div>
             </Col>
