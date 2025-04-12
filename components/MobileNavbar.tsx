@@ -4,6 +4,8 @@ import Image from "next/image";
 import styles from "@/styles/MobileNavbar.module.css";
 import {Button, Navbar} from 'react-bootstrap';
 import logoImg from '@/public/logo.png'; 
+import menuIcon from '@/public/menu.png'; 
+import closeIcon from '@/public/close.png'; 
 
 export default function MobileNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,7 +22,9 @@ export default function MobileNavbar() {
           <Image src={logoImg} alt="Logo" />
         </Navbar.Brand>
         <Button variant="link" onClick={() => setMenuOpen(true)}>
-          <span style={{ fontSize: "2rem" }}>&#9776;</span>
+          {/* <span style={{ fontSize: "2rem" }}>&#9776;</span> */}
+          <Image src={menuIcon} alt="menu Icon" />
+
         </Button>
       </nav>
 
@@ -29,7 +33,9 @@ export default function MobileNavbar() {
         <div className="d-flex justify-content-between align-items-center px-3 py-2">
           <Image src={logoImg} alt="logo" />
           <Button variant="link" onClick={() => setMenuOpen(false)} className="text-black">
-            <span style={{ fontSize: "2rem" }}>&times;</span>
+            {/* <span style={{ fontSize: "2rem" }}>&times;</span> */}
+            <Image src={closeIcon} alt="close Icon" />
+
           </Button>
         </div>
 

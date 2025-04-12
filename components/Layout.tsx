@@ -12,11 +12,12 @@ type LayoutProps = {
   title?: string;
 };
 
-export default function Layout({ children, title = 'Frontend Dev Task' }: LayoutProps) {
+export default function Layout({ children, title = 'Currency Board Website' }: LayoutProps) {
   return (
     <>
       <Head>
         <title>{title}</title>
+        <link rel="icon" href={"/money-icon.png"} />
         <meta name="description" content="Currency project with CoinGecko API" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

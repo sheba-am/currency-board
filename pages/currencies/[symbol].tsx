@@ -3,6 +3,8 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import styles from '@/styles/CurrencyModal.module.css';
 import currLogo from '@/public/curr-logo.png';
+import closeIcon from '@/public/close.png';
+
 const CurrencyModal = () => {
     const { selectedCurrency } = useCurrency();
     const router = useRouter();
@@ -15,7 +17,7 @@ const CurrencyModal = () => {
         router.push('/currencies');
     };
 
-    const formattedDate = new Date(selectedCurrency.last_updated).toLocaleString();
+    const formattedDate = new Date(selectedCurrency.last_updated).toLocaleString().split(',')[0];
 
     return (
         <div className={styles.backdrop}>
@@ -26,7 +28,11 @@ const CurrencyModal = () => {
                         src={currLogo}
                         alt="logo Section"
                     />
-                    <button className={styles.closeButton} onClick={handleClose}>×</button>
+                    <button className={styles.closeButton} onClick={handleClose}>
+                        <Image src={closeIcon} alt="Logo" />
+
+                    </button>
+
                 </div>
 
                 {/* Currency Info Row */}
@@ -38,13 +44,19 @@ const CurrencyModal = () => {
                             <strong className={styles.symbol}>{selectedCurrency.symbol.toUpperCase()}</strong>
                         </div>
                     </div>
-                    <div className={styles.updated}>Last Updated: {formattedDate}</div>
+                    <div className={`${styles.dateWrapper} d-none d-md-block`}>
+                        <div className={styles.updated}> {formattedDate} Updated</div>
+                    </div>
                 </div>
 
                 {/* Price */}
                 <div className={styles.priceRow}>
                     <span className={styles.price}>{selectedCurrency.current_price.toLocaleString()}</span>
                     <span className={styles.usd}>USD</span>
+                </div>
+                {/* Date Wrapper (Visible only on mobile) */}
+                <div className={`${styles.updated} d-block d-md-none`}>
+                    {formattedDate} Updated
                 </div>
             </div>
         </div>

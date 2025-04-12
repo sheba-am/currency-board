@@ -11,7 +11,7 @@
   
   .modal {
     background: #EDEDED;
-    padding: 2rem;
+    padding: 1rem 2rem 1rem 2rem;
     border-radius: 16px;
     width: 90%;
     max-width: 600px;
@@ -63,7 +63,7 @@
   }
   
   .priceRow {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     font-size: 2rem;
     font-weight: bold;
     display: flex;
@@ -86,3 +86,25 @@
     }
   }
   
+/* Mobile: Move the date to the bottom */
+@media (max-width: 768px) {
+  .currencyRow {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .dateWrapper {
+    align-self: flex-end; /* Moves date to the bottom right */
+    margin-top: 20px; /* Creates empty space before the date */
+    padding-right: 10px; /* Slight right padding for better positioning */
+  }
+
+
+  .updated {
+    display: block;
+    text-align: right; /* Aligns date to the right */
+    margin-top: 10px; /* Adds spacing below the price */
+    padding-right: 10px; /* Slight right padding */
+  }
+
+}  
