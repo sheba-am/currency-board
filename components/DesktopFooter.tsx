@@ -4,6 +4,7 @@ import logoImg from '@/public/logo.png';
 import instagramIcon from '@/public/instagram-icon.png';
 import twitterIcon from '@/public/twitter-icon.png';
 import facebookIcon from '@/public/facebook-icon.png';
+import ToggleButton from './ToggleButton';
 
 export default function DesktopFooter() {
   return (
@@ -18,7 +19,8 @@ export default function DesktopFooter() {
                 alt="logo Section"
               />
             </div>
-            <Button variant="outline-secondary" size="sm">Toggle Light/Dark</Button>
+            {/* <Button variant="outline-secondary" size="sm">Toggle Light/Dark</Button> */}
+            <ToggleButton />
           </Col>
 
           {/* Middle: Links */}

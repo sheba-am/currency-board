@@ -4,6 +4,7 @@ import logoImg from '@/public/logo.png';
 import instagramIcon from '@/public/instagram-icon.png';
 import twitterIcon from '@/public/twitter-icon.png';
 import facebookIcon from '@/public/facebook-icon.png';
+import ToggleButton from "./ToggleButton";
 export default function MobileFooter() {
   return (
     <footer className="d-md-none text-dark py-4">
@@ -31,7 +32,7 @@ export default function MobileFooter() {
 
         {/* Dark/Light toggle */}
         <div className="d-flex justify-content-center mb-3">
-          <Button variant="secondary" size="sm">Toggle Light/Dark</Button>
+          <ToggleButton />
         </div>
 
         {/* Footer note */}

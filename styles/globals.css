@@ -26,6 +26,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.dark-mode {
+  background-color: #121212;
+  color: #e2e2e2;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
