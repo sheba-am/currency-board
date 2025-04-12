@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <section className="py-5 ">
       <Container>
-        <Row className="align-items-center">
+        <Row className="align-items-center mb-2">
           {/* Text Side */}
           <Col md={6}>
             <h2 className="display-4 fw-bold text-primary main-blue">Manage your daily tasks better without all the stress</h2>
@@ -26,7 +26,7 @@ const HeroSection = () => {
             <Image
               src={heroImage}
               alt="Wehbsite Hero Image"
-              className="img-fluid rounded"
+              className="img-fluid rounded my-3"
               width={500}
               height={500}
               priority
