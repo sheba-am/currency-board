@@ -42,8 +42,11 @@ export default function ImageSlider() {
             {/* Image */}
             <Image
               src={slide}
-              alt={`Slide ${idx + 1}`}
-              className={styles.slideImage}
+              alt={`Slide ${idx + 1} Image`}
+              className={styles.slideImage}  
+              sizes="(min-width: 768px) 80vw, 100vw"
+              // priority={idx === 0} //  the first slide is loaded before the others
+
             />
 
             {/* Caption for Desktop (On Top of Image) */}

@@ -70,16 +70,16 @@ export default function CurrenciesPage() {
     }
   }, [setCurrencies, setInfiniteScrollActive]);
 
-//   useEffect(() => {
-//     fetchCurrencies(page);
-// }, [page, fetchCurrencies]);
-useEffect(() => {
-  if (page <= MAX_INF_SCROLL_PAGES && !fetchedPagesRef.current.has(page)) {
-    console.log('current pages', page)
-    fetchCurrencies(page);
-  }
-}, [page, fetchCurrencies]);
-//   Infinite scroll logic
+  //   useEffect(() => {
+  //     fetchCurrencies(page);
+  // }, [page, fetchCurrencies]);
+  useEffect(() => {
+    if (page <= MAX_INF_SCROLL_PAGES && !fetchedPagesRef.current.has(page)) {
+      console.log('current pages', page)
+      fetchCurrencies(page);
+    }
+  }, [page, fetchCurrencies]);
+  //   Infinite scroll logic
   useEffect(() => {
     if (!infiniteScrollActive || loading) return;
 
@@ -104,17 +104,29 @@ useEffect(() => {
     const nextPage = page + 1;
     setPage(nextPage);  // Update global state
     await fetchCurrencies(nextPage); // Fetch immediately
-  };  
+  };
 
+  const handleRowClick = (currency: Currency) => {
+    setSelectedCurrency(currency);
+    router.push(`/currencies/${currency.symbol.toUpperCase()}`);
+    setPage(prev => prev + 1);
+  };
+  
   return (
     <div className="w-100 ">
       <CurrenciesHeroSection />
-      <div className='currenciesTable'>
+      <section className='currenciesTable'>
         <Container>
           <div
-            // style={{ backgroundColor: '#EDEDED', borderRadius: '10px' }}
+          // style={{ backgroundColor: '#EDEDED', borderRadius: '10px' }}
           >
-            {error && <p className="text-center text-danger mt-3">{error}</p>}
+            {error && (
+              <>
+                <p className="text-center text-danger mt-3">{error}</p>
+                <Button variant="primary" onClick={() => fetchCurrencies(page)}>Retry</Button>
+              </>
+            )}
+
             <div className="table-responsive">
               <table className="table table-borderless custom-table-bg">
                 <thead className="border-bottom">
@@ -130,11 +142,7 @@ useEffect(() => {
                     <tr
                       key={currency.id}
                       style={{ cursor: 'pointer' }}
-                      onClick={() => {
-                        setSelectedCurrency(currency);
-                        router.push(`/currencies/${currency.symbol.toUpperCase()}`);
-                        setPage(prev => prev + 1);
-                      }}
+                      onClick={() => { handleRowClick(currency) }}
                     >
                       <td className="py-2 ps-4 align-middle" style={{ color: '#777E90' }}>{index + 1}</td>
                       <td className="py-2 ps-4 align-middle d-flex align-items-center gap-2">
@@ -166,9 +174,10 @@ useEffect(() => {
               </div>
             )}
             {loading && <p className="text-center text-white mt-3">Loading...</p>}
+            {!hasMore && !loading && <p className="text-center mt-3">No more data to load.</p>}
           </div>
         </Container>
-      </div>
+      </section>
     </div>
   );
 }

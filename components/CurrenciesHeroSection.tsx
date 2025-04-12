@@ -11,13 +11,13 @@ const CurrenciesHeroSection = () => {
           {/* Text Side */}
           <Col md={6}>
             <h1 className="custom-black-title fw-bold text-black mb-3">Today’s Cryptocurrency prices </h1>
-            <p className="lead custom-black-des">
+            <blockquote className="lead custom-black-des">
               The global crypto market cap is<span className="custom-black-bold-des "> $1.86T</span>
-            </p>
+            </blockquote>
           </Col>
 
           {/* Image Side */}
-          <Col md={6} className="text-center">
+          <Col xs={12} md={6} className="text-center">
             <Image
               src={heroImage}
               alt="Crypto Hero"
@@ -25,6 +25,7 @@ const CurrenciesHeroSection = () => {
               width={500}
               height={500}
               priority
+              sizes="(max-width: 768px) 100vw, 500px"
             />
           </Col>
         </Row>

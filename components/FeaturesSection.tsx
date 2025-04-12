@@ -44,8 +44,6 @@ export default function FeaturesSection() {
                 <Image
                   src={feature.img}
                   alt={feature.title}
-                  width={50}
-                  height={50}
                   className="me-3"
                 />
                 <div className="text-start">

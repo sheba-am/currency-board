@@ -20,7 +20,8 @@ export default function FAQSection() {
         <h2 className="fw-bold mb-3">FAQ</h2>
         <p className="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
 
-        <Accordion activeKey={activeKey}>
+        <Accordion activeKey={activeKey} onSelect={(eventKey) => toggleKey(eventKey)}>
+
           {[ 
             {
               key: "0", 
@@ -39,7 +40,7 @@ export default function FAQSection() {
             }
           ].map(({ key, question, answer }) => (
             <Accordion.Item eventKey={key} key={key}>
-              <Accordion.Header onClick={() => toggleKey(key)}>
+              <Accordion.Header>
                 <div className="d-flex justify-content-between w-100">
                   <span>{question}</span>
                   <span className="ms-2">{getIcon(key)}</span>

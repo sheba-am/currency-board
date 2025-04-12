@@ -16,7 +16,8 @@ export default function InfoImageSection() {
               className="rounded-circle"
               width={400}
               height={400}
-              style={{ objectFit: 'cover', boxShadow: "-31px 3px 84px -37px #7737FF40" }}
+              sizes="(min-width: 768px) 400px, 100vw"
+              style={{ objectFit: 'cover', objectPosition: 'center', boxShadow: "-31px 3px 84px -37px #7737FF40" }}
             />
           </Col>
 

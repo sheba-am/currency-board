@@ -9,14 +9,15 @@ export default function InfoImageSectionReversed() {
       <Container>
         <Row className="align-items-center">
           {/* Image on top for mobile, right for desktop */}
-          <Col md={6} className="text-center order-1 order-md-2 mt-4 mt-md-0">
+          <Col md={6} className="text-center order-1 order-md-2 mt-4 mb-4 mt-md-0">
             <Image
               src={infoImg2}
               alt="Info Section Reversed"
               className="rounded-circle"
               width={400}
               height={400}
-              style={{ objectFit: 'cover', boxShadow: "-31px 3px 84px -37px #7737FF40" }}
+              sizes="(min-width: 768px) 400px, 100vw"
+              style={{ objectFit: 'cover', objectPosition: 'center', boxShadow: "-31px 3px 84px -37px #7737FF40" }}
             />
           </Col>
 

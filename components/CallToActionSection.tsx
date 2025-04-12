@@ -16,7 +16,7 @@ export default function CallToActionSection() {
 
           {/* Right Side */}
           <Col md={4} className="d-flex justify-content-center align-items-end mt-5">
-            <Button variant="primary" className="w-60">
+            <Button variant="primary" className="w-60" aria-label="Get Started">
               Get Started <IoIosArrowForward className="ms-2" />
             </Button>
           </Col>
