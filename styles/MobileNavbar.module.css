@@ -5,8 +5,6 @@
   left: 0;
   height: 100vh;
   width: 100%;
-  background-color: white; /* or use var(--bs-dark) */
-  color: black;
   z-index: 1050;
   display: flex;
   flex-direction: column;
@@ -15,6 +13,7 @@
   opacity: 0;
   transform: translateY(-100%);
   pointer-events: none;
+  background: linear-gradient(180deg, #FAFBFF 0%,  #EDEDED);
 }
 
 /* This class makes the menu visible */
@@ -27,10 +26,17 @@
 .navLink {
   display: block;
   padding: 1rem 0;
-  font-size: 1.5rem;
   text-decoration: none;
-  color: black;
+  color: #4C5D77;
   transition: color 0.2s ease;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+
+.green {
+  color: #08C056;
 }
 
 .navLink:hover {

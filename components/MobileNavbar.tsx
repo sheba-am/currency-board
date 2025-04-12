@@ -43,11 +43,11 @@ export default function MobileNavbar() {
           <Link href="#pricing" className={styles.navLink} onClick={handleMenuItemClick}>Pricing</Link>
           <Link href="#how" className={styles.navLink} onClick={handleMenuItemClick}>How it works</Link>
           <Link href="#faq" className={styles.navLink} onClick={handleMenuItemClick}>FAQ</Link>
-          <Link href="/currencies" className={styles.navLink} onClick={handleMenuItemClick}>Currencies</Link>
+          <Link href="/currencies" className={`${styles.navLink} ${styles.green}`} onClick={handleMenuItemClick}>Currencies</Link>
         </div>
 
         <div className="position-absolute bottom-0 w-100 p-4 text-center">
-          <Button variant="primary" className="w-100 mb-2">Get Started</Button>
+          <Button variant="primary-2" className="w-100 mb-2">Get Started</Button>
           <Button variant="tertiary" className="w-100">Sign In</Button>
         </div>
       </div>

@@ -15,11 +15,11 @@ export default function DesktopNavbar() {
         </Navbar.Brand>
 
         {/* Middle: Nav Links */}
-        <Nav className="ms-2">
-          <Nav.Link href="#pricing" className="mx-2">Pricing</Nav.Link>
-          <Nav.Link href="#how-it-works" className="mx-2">How it Works</Nav.Link>
-          <Nav.Link href="#faq" className="mx-2">FAQ</Nav.Link>
-          <Nav.Link href="/currencies" className="mx-2">Currencies</Nav.Link>
+        <Nav>
+          <Nav.Link href="#pricing" className="mx-2 custom-nav-link">Pricing</Nav.Link>
+          <Nav.Link href="#how-it-works" className="mx-2 custom-nav-link">How it Works</Nav.Link>
+          <Nav.Link href="#faq" className="mx-2 custom-nav-link">FAQ</Nav.Link>
+          <Nav.Link href="/currencies" className="mx-2 custom-nav-link text-green">Currencies</Nav.Link>
         </Nav>
 
         {/* Right: Buttons */}

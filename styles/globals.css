@@ -43,6 +43,19 @@ a {
   }
 }
 
+/* ========= Desktop Navbar Styling =============== */
+
+.custom-nav-link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+
+}
+.text-green {
+  color: #08C056;
+  
+}
 
 /* ========= Landing Page Styling =============== */
 
