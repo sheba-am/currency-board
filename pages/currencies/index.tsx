@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 import { useCurrency } from '@/contexts/CurrencyContext';
 import { Currency } from '@/types/Currency';
 
-const MAX_INF_SCROLL_PAGES = 2;
+const MAX_INF_SCROLL_PAGES = 4;
 
 export default function CurrenciesPage() {
   const {
@@ -70,15 +70,15 @@ export default function CurrenciesPage() {
     }
   }, [setCurrencies, setInfiniteScrollActive]);
 
-  useEffect(() => {
+//   useEffect(() => {
+//     fetchCurrencies(page);
+// }, [page, fetchCurrencies]);
+useEffect(() => {
+  if (page <= MAX_INF_SCROLL_PAGES && !fetchedPagesRef.current.has(page)) {
+    console.log('current pages', page)
     fetchCurrencies(page);
+  }
 }, [page, fetchCurrencies]);
-// useEffect(() => {
-//     if (!fetchedPagesRef.current.has(page)) {
-//       fetchCurrencies(page);
-//     }
-//   }, [page, fetchCurrencies]);
-  
 //   Infinite scroll logic
   useEffect(() => {
     if (!infiniteScrollActive || loading) return;
@@ -99,6 +99,12 @@ export default function CurrenciesPage() {
     };
   }, [loading, hasMore, infiniteScrollActive, setPage]);
 
+
+  const handleShowMore = async () => {
+    const nextPage = page + 1;
+    setPage(nextPage);  // Update global state
+    await fetchCurrencies(nextPage); // Fetch immediately
+  };  
 
   return (
     <div className="w-100">
@@ -128,6 +134,7 @@ export default function CurrenciesPage() {
                     onClick={() => {
                       setSelectedCurrency(currency);
                       router.push(`/currencies/${currency.symbol.toUpperCase()}`);
+                      setPage(prev => prev + 1);
                     }}
                   >
                     <td className="py-2 ps-4 align-middle" style={{ color: '#777E90' }}>{index + 1}</td>
@@ -155,7 +162,7 @@ export default function CurrenciesPage() {
               <Button
                 variant="primary-2"
                 className="px-6"
-                onClick={() => setPage(prev => prev + 1)}
+                onClick={handleShowMore}
               >
                 Show More
               </Button>
