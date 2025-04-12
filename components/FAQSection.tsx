@@ -15,7 +15,7 @@ export default function FAQSection() {
   const getIcon = (key: any) => (activeKey === key ? <FiMinusCircle /> : <FiPlusCircle />);
 
   return (
-    <section className="py-5 ">
+    <section className="py-5 faq">
       <Container className="text-center custom-bg-gray px-5 py-5">
         <h2 className="fw-bold mb-3">FAQ</h2>
         <p className="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>

@@ -146,7 +146,7 @@ a {
     padding-right: 0 ;
   }
 
-  .container {
+  .faq .container {
     max-width: 100%; /* Override Bootstrap's default margins */
     padding-left: 0 ;
     padding-right: 0 ;
@@ -451,7 +451,7 @@ div.carousel .slider-wrapper::before {
     padding-right: 0 ;
   }
 
-  .container {
+  .callAction .container {
     max-width: 100%; /* Override Bootstrap's default margins */
     padding-left: 0 ;
     padding-right: 0 ;

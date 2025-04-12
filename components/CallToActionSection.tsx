@@ -3,7 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 export default function CallToActionSection() {
   return (
-    <section className="py-5 ">
+    <section className="py-5 callAction ">
       <Container className="d-flex px-5 py-5 custom-bg-blue">
         <Row className="align-items-center">
           {/* Left Side */}
