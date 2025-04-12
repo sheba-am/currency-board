@@ -25,7 +25,7 @@ const HeroSection = () => {
           <Col md={6} className="text-center">
             <Image
               src={heroImage}
-              alt="Crypto Hero"
+              alt="Wehbsite Hero Image"
               className="img-fluid rounded"
               width={500}
               height={500}
