@@ -107,71 +107,68 @@ useEffect(() => {
   };  
 
   return (
-    <div className="w-100">
+    <div className="w-100 ">
       <CurrenciesHeroSection />
-      <Container>
-        <div
-          className="p-4 mt-4"
-          style={{ backgroundColor: '#EDEDED', borderRadius: '10px' }}
-        >
-          {error && <p className="text-center text-danger mt-3">{error}</p>}
-
-          <div className="table-responsive">
-            <table className="table table-borderless custom-table-bg">
-              <thead className="border-bottom">
-                <tr>
-                  <th className="py-3 ps-4 w-5" style={{ color: '#777E90' }}>#</th>
-                  <th className="py-3 ps-4 w-50" style={{ color: '#777E90' }}>Name</th>
-                  <th className="py-3 w-25" style={{ color: '#777E90' }}>Price(USD)</th>
-                  <th className="py-3 w-25 text-end pe-4" style={{ color: '#777E90' }}>Last Updated</th>
-                </tr>
-              </thead>
-              <tbody>
-                {currencies.map((currency, index) => (
-                  <tr
-                    key={currency.id}
-                    style={{ cursor: 'pointer' }}
-                    onClick={() => {
-                      setSelectedCurrency(currency);
-                      router.push(`/currencies/${currency.symbol.toUpperCase()}`);
-                      setPage(prev => prev + 1);
-                    }}
-                  >
-                    <td className="py-2 ps-4 align-middle" style={{ color: '#777E90' }}>{index + 1}</td>
-                    <td className="py-2 ps-4 align-middle d-flex align-items-center gap-2">
-                      <img src={currency.image} alt={currency.name} width={24} height={24} />
-                      <div>{currency.name}</div>
-                      <small className="text-muted">{currency.symbol.toUpperCase()}</small>
-                    </td>
-                    <td className="py-2 align-middle">${currency.current_price.toLocaleString()}</td>
-                    <td className="py-2 align-middle text-end pe-4">
-                      {ConvertDatetToPerisan(currency.last_updated)}
-                    </td>
+      <div className='currenciesTable'>
+        <Container>
+          <div
+            // style={{ backgroundColor: '#EDEDED', borderRadius: '10px' }}
+          >
+            {error && <p className="text-center text-danger mt-3">{error}</p>}
+            <div className="table-responsive">
+              <table className="table table-borderless custom-table-bg">
+                <thead className="border-bottom">
+                  <tr>
+                    <th className="py-3 ps-4 w-5" style={{ color: '#777E90' }}>#</th>
+                    <th className="py-3 ps-4 w-50" style={{ color: '#777E90' }}>Name</th>
+                    <th className="py-3 w-25" style={{ color: '#777E90' }}>Price(USD)</th>
+                    <th className="py-3 w-25 text-end pe-4" style={{ color: '#777E90' }}>Last Updated</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          {/* Sentinel for infinite scroll */}
-          {infiniteScrollActive && <div ref={sentinelRef} style={{ height: '1px' }} />}
-
-          {/* Show More button */}
-          {!infiniteScrollActive && hasMore && !loading && (
-            <div className="text-center mt-4" style={{ maxWidth: "600px", margin: "0 auto" }}>
-              <Button
-                variant="primary-2"
-                className="px-6"
-                onClick={handleShowMore}
-              >
-                Show More
-              </Button>
+                </thead>
+                <tbody>
+                  {currencies.map((currency, index) => (
+                    <tr
+                      key={currency.id}
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => {
+                        setSelectedCurrency(currency);
+                        router.push(`/currencies/${currency.symbol.toUpperCase()}`);
+                        setPage(prev => prev + 1);
+                      }}
+                    >
+                      <td className="py-2 ps-4 align-middle" style={{ color: '#777E90' }}>{index + 1}</td>
+                      <td className="py-2 ps-4 align-middle d-flex align-items-center gap-2">
+                        <img src={currency.image} alt={currency.name} width={24} height={24} />
+                        <div>{currency.name}</div>
+                        <small className="text-muted">{currency.symbol.toUpperCase()}</small>
+                      </td>
+                      <td className="py-2 align-middle">${currency.current_price.toLocaleString()}</td>
+                      <td className="py-2 align-middle text-end pe-4">
+                        {ConvertDatetToPerisan(currency.last_updated)}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-          )}
-
-          {loading && <p className="text-center text-white mt-3">Loading...</p>}
-        </div>
-      </Container>
+            {/* Sentinel for infinite scroll */}
+            {infiniteScrollActive && <div ref={sentinelRef} style={{ height: '1px' }} />}
+            {/* Show More button */}
+            {!infiniteScrollActive && hasMore && !loading && (
+              <div className="text-center mt-4" style={{ maxWidth: "600px", margin: "0 auto" }}>
+                <Button
+                  variant="primary-2"
+                  className="px-6"
+                  onClick={handleShowMore}
+                >
+                  Show More
+                </Button>
+              </div>
+            )}
+            {loading && <p className="text-center text-white mt-3">Loading...</p>}
+          </div>
+        </Container>
+      </div>
     </div>
   );
 }

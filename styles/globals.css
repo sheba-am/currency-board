@@ -154,23 +154,6 @@ a {
 }
 
 
-/* ========= Table Styling =============== */
-.custom-table-bg {
-  background-color: #EDEDED;
-  border-radius: 10px;
-  color: white;
-}
-
-
-.custom-table-bg thead,
-.custom-table-bg tbody,
-.custom-table-bg tr,
-.custom-table-bg td,
-.custom-table-bg th {
-  background-color: transparent;
-  color: black;
-}
-
 /* ========= primary button Styling =============== */
 
 
@@ -483,4 +466,40 @@ div.carousel .slider-wrapper::before {
   line-height: 30px;
   letter-spacing: -1%;
 
+}
+
+.currenciesTable {
+  border-radius: 20px;
+  background-color: #EDEDED;
+  margin: 30px 80px 30px 80px;
+  padding: 40px;
+}
+@media (max-width: 768px) {
+  .currenciesTable {
+    border-radius: 0;
+    margin: 0 ;
+  }
+  .currenciesTable .container {
+    
+    max-width: 100%; /* Override Bootstrap's default margins */
+    padding-left: 0 ;
+    padding-right: 0 ;  
+    border-radius: 0;
+  }
+}
+
+/* ========= Table Styling =============== */
+.custom-table-bg {
+  background-color: none;
+  color: white;
+}
+
+
+.custom-table-bg thead,
+.custom-table-bg tbody,
+.custom-table-bg tr,
+.custom-table-bg td,
+.custom-table-bg th {
+  background-color: transparent;
+  color: black;
 }
