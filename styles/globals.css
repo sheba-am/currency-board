@@ -559,9 +559,24 @@ body.dark-mode div.carousel .slider-wrapper::before {
     padding-left: 0;
     padding-right: 0;
   }
+  body.dark-mode  .callAction .custom-bg-blue {
+    border-radius: 0 ;
+    /* Remove rounded edges */
+    width: 100vw;
+    /* Full width */
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  body.dark-mode .callAction .container {
+    max-width: 100%;
+    /* Override Bootstrap's default margins */
+    padding-left: 0;
+    padding-right: 0;
+  }  
 }
 
-body.dark-mode .custom-bg-blue {
+body.dark-mode  .custom-bg-blue {
   background-color: #292B33;
   border-radius: 56px;
   /* Default for desktop */
