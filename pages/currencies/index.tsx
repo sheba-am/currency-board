@@ -113,7 +113,7 @@ export default function CurrenciesPage() {
   };
   
   return (
-    <div className="w-100 ">
+    <div className="w-100 currenciesPage ">
       <CurrenciesHeroSection />
       <section className='currenciesTable'>
         <Container>
@@ -147,8 +147,9 @@ export default function CurrenciesPage() {
                       <td className="py-2 ps-4 align-middle custom-header-text">{index + 1}</td>
                       <td className="py-2 ps-4 align-middle d-flex align-items-center gap-2 custom-data-text">
                         <img src={currency.image} alt={currency.name} width={24} height={24} />
-                        <div>{currency.name}</div>
-                        <small className="custom-text-muted  custom-data-text">{currency.symbol.toUpperCase()}</small>
+                        <div>{`${currency.name} `}
+                        <span className="custom-text-muted  ">{currency.symbol.toUpperCase()}</span>
+                        </div>
                       </td>
                       <td className="py-2 align-middle  custom-data-text">${currency.current_price.toLocaleString()}</td>
                       <td className="py-2 align-middle text-end pe-4  custom-data-text">

@@ -601,17 +601,33 @@ body.dark-mode .custom-bg-blue {
   letter-spacing: 0%;
 
 }
-.currenciesTable .custom-text-muted {
+
+.custom-data-text .custom-text-muted {
   color: #777E90;
+  
 }
 
 @media (max-width: 768px) {
-  .currenciesTable {
+  .currenciesPage .currenciesTable {
     border-radius: 0;
     margin: 0;
   }
 
   .currenciesTable .container {
+
+    max-width: 100%;
+    /* Override Bootstrap's default margins */
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+  }
+
+  body.dark-mode .currenciesPage .currenciesTable {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  body.dark-mode .currenciesTable .container {
 
     max-width: 100%;
     /* Override Bootstrap's default margins */
@@ -638,6 +654,10 @@ body.dark-mode .currenciesTable .custom-data-text {
 
 }
 
+body.dark-mode .custom-data-text .custom-text-muted {
+  color: #b1bad1;
+  
+}
 /* ========= Table Styling =============== */
 .custom-table-bg {
   background-color: none;
