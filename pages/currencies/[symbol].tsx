@@ -16,7 +16,9 @@ const CurrencyModal = () => {
     }
 
     const handleClose = () => {
-        router.push('/currencies');
+        // router.push('/currencies');
+        router.back(); // will return to the same scroll position
+
     };
 
     const formattedDate = new Date(selectedCurrency.last_updated).toLocaleString().split(',')[0];

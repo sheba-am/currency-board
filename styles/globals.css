@@ -39,6 +39,7 @@ body.dark-mode {
   letter-spacing: -1%;
 
 }
+
 body.dark-mode .custom-text-secondary {
   color: #C8CED6;
   font-weight: 400;
@@ -504,12 +505,13 @@ body.dark-mode div.carousel .slider-wrapper::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgb(34, 34, 34, 1) 0%, rgb(34, 34, 34,0) 10%,rgb(34, 34, 34, 0) 90%, rgb(34, 34, 34,1) 100%);
+  background: linear-gradient(to right, rgb(34, 34, 34, 1) 0%, rgb(34, 34, 34, 0) 10%, rgb(34, 34, 34, 0) 90%, rgb(34, 34, 34, 1) 100%);
   z-index: 1;
   /* Place the gradient on top */
   pointer-events: none;
   /* Make sure interactions are still possible */
 }
+
 /* ========= Call To Action Styling =============== */
 
 .custom-bg-blue {
@@ -587,6 +589,22 @@ body.dark-mode .custom-bg-blue {
   padding: 40px;
 }
 
+.currenciesTable .custom-header-text {
+  color: #777E90;
+}
+
+.currenciesTable .custom-data-text {
+  color: #23262F;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0%;
+
+}
+.currenciesTable .custom-text-muted {
+  color: #777E90;
+}
+
 @media (max-width: 768px) {
   .currenciesTable {
     border-radius: 0;
@@ -601,6 +619,23 @@ body.dark-mode .custom-bg-blue {
     padding-right: 0;
     border-radius: 0;
   }
+}
+
+body.dark-mode .currenciesTable {
+  border-radius: 20px;
+  background-color: #434343;
+  margin: 30px 80px 30px 80px;
+  padding: 40px;
+}
+
+body.dark-mode .currenciesTable .custom-header-text {
+  color: #C8CED6;
+
+}
+
+body.dark-mode .currenciesTable .custom-data-text {
+  color: #e0e7f0;
+
 }
 
 /* ========= Table Styling =============== */

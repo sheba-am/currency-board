@@ -131,10 +131,10 @@ export default function CurrenciesPage() {
               <table className="table table-borderless custom-table-bg">
                 <thead className="border-bottom">
                   <tr>
-                    <th className="py-3 ps-4 w-5" style={{ color: '#777E90' }}>#</th>
-                    <th className="py-3 ps-4 w-50" style={{ color: '#777E90' }}>Name</th>
-                    <th className="py-3 w-25" style={{ color: '#777E90' }}>Price(USD)</th>
-                    <th className="py-3 w-25 text-end pe-4" style={{ color: '#777E90' }}>Last Updated</th>
+                    <th className="py-3 ps-4 w-5 custom-header-text" >#</th>
+                    <th className="py-3 ps-4 w-50 custom-header-text" >Name</th>
+                    <th className="py-3 w-25 custom-header-text">Price(USD)</th>
+                    <th className="py-3 w-25 text-end pe-4 custom-header-text" >Last Updated</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -144,14 +144,14 @@ export default function CurrenciesPage() {
                       style={{ cursor: 'pointer' }}
                       onClick={() => { handleRowClick(currency) }}
                     >
-                      <td className="py-2 ps-4 align-middle" style={{ color: '#777E90' }}>{index + 1}</td>
-                      <td className="py-2 ps-4 align-middle d-flex align-items-center gap-2">
+                      <td className="py-2 ps-4 align-middle custom-header-text">{index + 1}</td>
+                      <td className="py-2 ps-4 align-middle d-flex align-items-center gap-2 custom-data-text">
                         <img src={currency.image} alt={currency.name} width={24} height={24} />
                         <div>{currency.name}</div>
-                        <small className="text-muted">{currency.symbol.toUpperCase()}</small>
+                        <small className="custom-text-muted  custom-data-text">{currency.symbol.toUpperCase()}</small>
                       </td>
-                      <td className="py-2 align-middle">${currency.current_price.toLocaleString()}</td>
-                      <td className="py-2 align-middle text-end pe-4">
+                      <td className="py-2 align-middle  custom-data-text">${currency.current_price.toLocaleString()}</td>
+                      <td className="py-2 align-middle text-end pe-4  custom-data-text">
                         {ConvertDatetToPerisan(currency.last_updated)}
                       </td>
                     </tr>
