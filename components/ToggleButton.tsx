@@ -8,7 +8,7 @@ export default function ToggleButton() {
   const { isDarkMode, toggleDarkMode } = useTheme();
 
   return (
-    <div className={styles.toggleWrapper}>
+    <div className={`${isDarkMode ? styles.toggleWrapperDark : styles.toggleWrapper}`}>
       <div className={styles.iconWrapper}>
         {isDarkMode ? <Image src={darkMode}  alt="dark mode"/> :<Image src={lightMode}  alt="light mode"/>}
       </div>
