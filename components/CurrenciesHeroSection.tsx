@@ -5,7 +5,7 @@ import heroImage from "@/public/currency-hero.png";
 
 const CurrenciesHeroSection = () => {
   return (
-    <section className="py-5" style={{backgroundColor: "#DECBE9"}}>
+    <section className="py-5" style={{backgroundColor: "#DECBE9", minHeight:"70vh"}}>
       <Container>
         <Row className="align-items-center">
           {/* Text Side */}
