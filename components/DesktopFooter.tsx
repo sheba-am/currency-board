@@ -68,7 +68,7 @@ export default function DesktopFooter() {
 
         <Row>
           <Col className="text-center">
-            <small className="text-muted">Made by Saba</small>
+            <small className="custom-text-muted">Made by Saba</small>
           </Col>
         </Row>
       </Container>

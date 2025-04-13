@@ -214,7 +214,7 @@ export default function CurrenciesPage() {
             )}
 
             {/* Loading and Status Messages */}
-            {loading && <p className="text-center text-white mt-3">Loading...</p>}
+            {loading && <p className="text-center mt-3">Loading...</p>}
             {!hasMore && !loading && <p className="text-center mt-3">No more data to load.</p>}
           </div>
         </Container>

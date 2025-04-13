@@ -32,7 +32,7 @@ export default function FeaturesSection() {
         </div>
 
         {/* Description */}
-        <p className="text-muted mb-5">
+        <p className="custom-text-muted mb-5">
           Simple, fast, effortlessly.
         </p>
 

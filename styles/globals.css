@@ -40,6 +40,7 @@ body.dark-mode {
 
 }
 
+
 body.dark-mode .custom-text-secondary {
   color: #C8CED6;
   font-weight: 400;
@@ -49,6 +50,15 @@ body.dark-mode .custom-text-secondary {
 
 }
 
+.custom-text-muted {
+  color: #777E90;
+  
+}
+
+body.dark-mode .custom-text-muted {
+  color: rgb(188, 193, 207) ;
+  
+}
 
 * {
   box-sizing: border-box;
@@ -77,9 +87,14 @@ a {
 
 }
 
+
 .text-green {
   color: #08C056;
-
+  
+}
+.text-green:hover {
+  color: #65E69C;
+  
 }
 
 body.dark-mode .navbar-nav .custom-nav-link {
@@ -234,7 +249,7 @@ body.dark-mode .accordion-item .accordion-button {
 }
 
 body.dark-mode .faq-text {
-  color: #e2e2e2;
+  color: #e2e2e2 ;
 }
 
 /* ========= primary button Styling =============== */
@@ -677,6 +692,7 @@ body.dark-mode .custom-data-text .custom-text-muted {
 /* ========= Desktop Footer Styling =============== */
 
 .custom-footer {
+  color: #4C5D77;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;

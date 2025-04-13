@@ -16,9 +16,9 @@ export default function FAQSection() {
 
   return (
     <section className="py-5 faq">
-      <Container className="text-center custom-bg-gray px-5 py-5">
-        <h2 className="fw-bold mb-3 faq-text">FAQ</h2>
-        <p className=" faq-text  mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+      <Container className=" custom-bg-gray px-5 py-5">
+        <h2 className="text-center fw-bold mb-3 faq-text">FAQ</h2>
+        <p className="text-center faq-text  mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
 
         <Accordion activeKey={activeKey} onSelect={(eventKey) => toggleKey(eventKey)}>
 
@@ -42,11 +42,11 @@ export default function FAQSection() {
             <Accordion.Item eventKey={key} key={key}>
               <Accordion.Header>
                 <div className="d-flex justify-content-between w-100">
-                  <span>{question}</span>
+                  <span className='fw-bold'>{question}</span>
                   <span className="ms-2">{getIcon(key)}</span>
                 </div>
               </Accordion.Header>
-              <Accordion.Body>{answer}</Accordion.Body>
+              <Accordion.Body><span className='faq-text'>{answer}</span></Accordion.Body>
             </Accordion.Item>
           ))}
         </Accordion>

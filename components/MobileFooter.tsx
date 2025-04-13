@@ -36,7 +36,7 @@ export default function MobileFooter() {
         </div>
 
         {/* Footer note */}
-        <small className="d-flex justify-content-center text-muted">Made by Saba</small>
+        <small className="d-flex justify-content-center custom-text-muted">Made by Saba</small>
       </Container>
     </footer>
   );

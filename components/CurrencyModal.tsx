@@ -40,10 +40,10 @@ export default function CurrencyModal({ currency }: Props) {
               <img src={currency.image} alt={currency.name} width={48} height={48} />
               <div>
                 <h5 className="mb-1">{currency.name}</h5>
-                <small className="text-muted">{currency.symbol.toUpperCase()}</small>
+                <small className="custom-text-muted">{currency.symbol.toUpperCase()}</small>
               </div>
             </div>
-            <div className="text-end text-muted">
+            <div className="text-end custom-text-muted">
               <small>Last updated:</small><br />
               <strong>{currency.last_updated}</strong>
             </div>
@@ -51,7 +51,7 @@ export default function CurrencyModal({ currency }: Props) {
 
           {/* Price */}
           <div className="mt-4">
-            <h2 className="fw-bold">${currency.current_price.toLocaleString()} <small className="text-muted">USD</small></h2>
+            <h2 className="fw-bold">${currency.current_price.toLocaleString()} <small className="custom-text-muted">USD</small></h2>
           </div>
 
         </div>

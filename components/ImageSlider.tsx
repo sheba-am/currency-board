@@ -21,7 +21,7 @@ export default function ImageSlider() {
               {/* Caption for Mobile (Before the Image) */}
               <div className="d-block d-md-none mb-3">
                 <h3 className={`fw-bold mb-2 {styles.captionTitle}`}>Risk-free 30 day trial to level up your team’s productivity.</h3>
-                <p className="text-muted">Get started now and take advantage of our 30-day free trial today. No credit card required.</p>
+                <p className="custom-text-muted">Get started now and take advantage of our 30-day free trial today. No credit card required.</p>
               </div>
             </Container>   
       <Carousel
