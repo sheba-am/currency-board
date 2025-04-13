@@ -9,7 +9,7 @@ export default function InfoImageSectionReversed() {
       <Container>
         <Row className="align-items-center">
           {/* Image on top for mobile, right for desktop */}
-          <Col md={6} className="text-center order-1 order-md-2 mt-4 mb-4 mt-md-0">
+          <Col md={6} className="text-center order-1 order-lg-2 mt-4 mb-4 mt-lg-0">
             <Image
               src={infoImg2}
               alt="Info Section Reversed"
@@ -22,7 +22,7 @@ export default function InfoImageSectionReversed() {
           </Col>
 
           {/* Text on the bottom for mobile, left for desktop */}
-          <Col md={6} className="order-2 order-md-1">
+          <Col lg={6} className="order-2 order-lg-1">
             <h2 className="fw-bold mb-3 main-orange">Free template library included</h2>
             <p className="custom-text-secondary mb-4">
               We have designed our app for increased efficiency and it will help you to start getting more things done.

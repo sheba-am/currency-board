@@ -4,7 +4,7 @@ import logoImg from '@/public/logo.png';
 
 export default function DesktopNavbar() {
   return (
-    <Navbar expand="lg" className=" py-3 d-none d-md-flex">
+    <Navbar expand="lg" className=" py-3 d-none d-lg-flex">
       <Container>
         {/* Left: Logo */}
         <Navbar.Brand href="/">

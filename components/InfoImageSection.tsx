@@ -22,7 +22,7 @@ export default function InfoImageSection() {
           </Col>
 
           {/* Text on the Right */}
-          <Col md={6}>
+          <Col lg={6}>
             <h2 className="fw-bold mb-3 main-purple">Revolutionize your workflow</h2>
               {/* <div className='d-flex text-wrap w-100'> */}
                 <p className=" mb-4 custom-text-secondary">

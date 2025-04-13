@@ -8,7 +8,7 @@ import ToggleButton from './ToggleButton';
 
 export default function DesktopFooter() {
   return (
-    <footer className="pt-5 pb-3 d-none d-md-flex">
+    <footer className="pt-5 pb-3 d-none d-lg-flex">
       <Container>
         <Row className="mb-4">
           {/* Left: Logo + Mode Toggle */}

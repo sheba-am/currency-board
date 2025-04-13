@@ -17,7 +17,7 @@ export default function MobileNavbar() {
     setMenuOpen(false); // Close menu when any item is clicked
   };  
   return (
-    <div className={`d-md-none`}>
+    <div className={`d-lg-none`}>
       {/* Top bar */}
       <nav className="d-flex justify-content-between align-items-center px-3 py-2">
         <Navbar.Brand  href="/" >
