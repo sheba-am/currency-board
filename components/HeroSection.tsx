@@ -12,7 +12,7 @@ const HeroSection = () => {
           {/* Text Side */}
           <Col md={6}>
             <h2 className="display-4 fw-bold text-primary main-blue">Manage your daily tasks better without all the stress</h2>
-            <p className="lead text-secondary">
+            <p className="lead custom-text-secondary">
               Change the way you manage your tasks with our revolutionary project management technology.
             </p>
             <div className="d-flex flex-column flex-md-row gap-2 mt-3">

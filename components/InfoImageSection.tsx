@@ -25,7 +25,7 @@ export default function InfoImageSection() {
           <Col md={6}>
             <h2 className="fw-bold mb-3 main-purple">Revolutionize your workflow</h2>
               {/* <div className='d-flex text-wrap w-100'> */}
-                <p className=" mb-4 info-description">
+                <p className=" mb-4 custom-text-secondary">
                   We have designed our app for increased efficiency and it will help you to start getting more things done.
                 </p>
               {/* </div> */}

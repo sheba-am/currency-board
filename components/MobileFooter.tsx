@@ -7,7 +7,7 @@ import facebookIcon from '@/public/facebook-icon.png';
 import ToggleButton from "./ToggleButton";
 export default function MobileFooter() {
   return (
-    <footer className="d-md-none text-dark py-4">
+    <footer className="d-md-none custom-footer py-4">
       <Container className="px-3">
         {/* Logo */}
         <div className="mb-3 d-flex justify-content-center" >

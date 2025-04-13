@@ -1,5 +1,4 @@
-
-.fullscreenMenu {
+.fullscreenMenuLight {
   position: fixed;
   top: 0;
   left: 0;
@@ -15,9 +14,30 @@
   pointer-events: none;
   background: linear-gradient(180deg, #FAFBFF 0%,  #EDEDED);
 }
-
+.fullscreenMenuDark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+  background: linear-gradient(180deg, #000000 0%,  #000000);
+}
 /* This class makes the menu visible */
-.fullscreenMenu.show {
+.fullscreenMenuLight.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.fullscreenMenuDark.show {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
@@ -39,6 +59,12 @@
   color: #08C056;
 }
 
+.fullscreenMenuDark .navLink {
+  color: #FAFBFF;
+}
+.fullscreenMenuDark .green {
+  color: #08C056;
+}
 .navLink:hover {
   color: gray;
 }

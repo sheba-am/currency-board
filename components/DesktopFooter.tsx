@@ -8,7 +8,7 @@ import ToggleButton from './ToggleButton';
 
 export default function DesktopFooter() {
   return (
-    <footer className="text-dark pt-5 pb-3 d-none d-md-flex">
+    <footer className="pt-5 pb-3 d-none d-md-flex">
       <Container>
         <Row className="mb-4">
           {/* Left: Logo + Mode Toggle */}
@@ -28,15 +28,15 @@ export default function DesktopFooter() {
             <Row>
               <Col>
                 <ul className="list-unstyled">
-                  <li><a href="#pricing" className="text-dark">Pricing</a></li>
-                  <li><a href="#how-it-works" className="text-dark">How it Works</a></li>
-                  <li><a href="#faq" className="text-dark">FAQ</a></li>
+                  <li><a href="#pricing" className="custom-footer">Pricing</a></li>
+                  <li><a href="#how-it-works" className="custom-footer">How it Works</a></li>
+                  <li><a href="#faq" className="custom-footer">FAQ</a></li>
                 </ul>
               </Col>
               <Col>
                 <ul className="list-unstyled">
-                  <li><a href="/currencies" className="text-dark">Currencies</a></li>
-                  <li><a href="#" className="text-dark">Contact</a></li>
+                  <li><a href="/currencies" className="custom-footer">Currencies</a></li>
+                  <li><a href="#" className="custom-footer">Contact</a></li>
                 </ul>
               </Col>
             </Row>

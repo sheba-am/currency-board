@@ -17,8 +17,8 @@ export default function FAQSection() {
   return (
     <section className="py-5 faq">
       <Container className="text-center custom-bg-gray px-5 py-5">
-        <h2 className="fw-bold mb-3">FAQ</h2>
-        <p className="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+        <h2 className="fw-bold mb-3 faq-text">FAQ</h2>
+        <p className=" faq-text  mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
 
         <Accordion activeKey={activeKey} onSelect={(eventKey) => toggleKey(eventKey)}>
 

@@ -27,9 +27,27 @@ body {
 }
 
 body.dark-mode {
-  background-color: #121212;
-  color: #e2e2e2;
+  background-color: #222222;
+  color: #81A2D2;
+
 }
+
+.custom-text-secondary {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -1%;
+
+}
+body.dark-mode .custom-text-secondary {
+  color: #C8CED6;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -1%;
+
+}
+
 
 * {
   box-sizing: border-box;
@@ -57,9 +75,20 @@ a {
   letter-spacing: 0%;
 
 }
+
 .text-green {
   color: #08C056;
-  
+
+}
+
+body.dark-mode .navbar-nav .custom-nav-link {
+  color: #81A2D2;
+
+}
+
+body.dark-mode .navbar-nav .text-green {
+  color: #08C056;
+
 }
 
 /* ========= Landing Page Styling =============== */
@@ -123,14 +152,17 @@ a {
   background-color: #EDEDED;
 }
 
+
 /* hide the defualt accordion button */
 .accordion-button::after {
   display: none;
 }
 
 .accordion-item {
-  border-left: none;   /*Removes the border from accordion items */
-  border-right: none;   /*Removes the border from accordion items */
+  border-left: none;
+  /*Removes the border from accordion items */
+  border-right: none;
+  /*Removes the border from accordion items */
   border-top: none;
   background-color: #EDEDED;
 
@@ -156,21 +188,53 @@ a {
   background-color: #EDEDED;
   border-radius: 56px;
 }
+
 @media (max-width: 768px) {
   .custom-bg-gray {
-    border-radius: 0; /* Remove rounded edges */
-    width: 100vw; /* Full width */
-    padding-left: 0 ;
-    padding-right: 0 ;
+    border-radius: 0;
+    /* Remove rounded edges */
+    width: 100vw;
+    /* Full width */
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .faq .container {
-    max-width: 100%; /* Override Bootstrap's default margins */
-    padding-left: 0 ;
-    padding-right: 0 ;
+    max-width: 100%;
+    /* Override Bootstrap's default margins */
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
+body.dark-mode .custom-bg-gray {
+  background-color: #434343;
+}
+
+body.dark-mode .accordion {
+  background-color: #434343;
+}
+
+body.dark-mode .accordion-item {
+  background-color: #434343;
+  border-color: #5C5C5C;
+}
+
+body.dark-mode .accordion-button:not(.collapsed) {
+  background-color: #434343;
+  color: #A5A5A5;
+
+}
+
+body.dark-mode .accordion-item .accordion-button {
+  background-color: #434343;
+  color: #A5A5A5;
+
+}
+
+body.dark-mode .faq-text {
+  color: #e2e2e2;
+}
 
 /* ========= primary button Styling =============== */
 
@@ -437,28 +501,44 @@ div.carousel .slider-wrapper::before {
 
 .custom-bg-blue {
   background-color: #BED0FF;
-  border-radius: 56px; /* Default for desktop */
+  border-radius: 56px;
+  /* Default for desktop */
   background-image: url('../public/pattern.png');
   background-blend-mode: multiply;
   min-height: 400px;
 }
 
+.title-main-blue {
+  color: #2140D4;
+}
+
 /* Mobile View: Remove margins and make it full width */
 @media (max-width: 768px) {
   .custom-bg-blue {
-    border-radius: 0; /* Remove rounded edges */
-    width: 100vw; /* Full width */
-    padding-left: 0 ;
-    padding-right: 0 ;
+    border-radius: 0;
+    /* Remove rounded edges */
+    width: 100vw;
+    /* Full width */
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .callAction .container {
-    max-width: 100%; /* Override Bootstrap's default margins */
-    padding-left: 0 ;
-    padding-right: 0 ;
+    max-width: 100%;
+    /* Override Bootstrap's default margins */
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
+body.dark-mode .custom-bg-blue {
+  background-color: #292B33;
+  border-radius: 56px;
+  /* Default for desktop */
+  background-image: url('../public/pattern.png');
+  min-height: 400px;
+  background-blend-mode: soft-light;
+}
 
 /* ========= Currencies Styling =============== */
 
@@ -471,6 +551,7 @@ div.carousel .slider-wrapper::before {
 }
 
 .custom-black-des {
+  color: #23262F;
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
@@ -492,16 +573,19 @@ div.carousel .slider-wrapper::before {
   margin: 30px 80px 30px 80px;
   padding: 40px;
 }
+
 @media (max-width: 768px) {
   .currenciesTable {
     border-radius: 0;
-    margin: 0 ;
+    margin: 0;
   }
+
   .currenciesTable .container {
-    
-    max-width: 100%; /* Override Bootstrap's default margins */
-    padding-left: 0 ;
-    padding-right: 0 ;  
+
+    max-width: 100%;
+    /* Override Bootstrap's default margins */
+    padding-left: 0;
+    padding-right: 0;
     border-radius: 0;
   }
 }
@@ -520,4 +604,14 @@ div.carousel .slider-wrapper::before {
 .custom-table-bg th {
   background-color: transparent;
   color: black;
+}
+
+/* ========= Desktop Footer Styling =============== */
+
+.custom-footer {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+
 }

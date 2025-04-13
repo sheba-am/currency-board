@@ -4,10 +4,12 @@ import Image from 'next/image';
 import styles from '@/styles/CurrencyModal.module.css';
 import currLogo from '@/public/curr-logo.png';
 import closeIcon from '@/public/close.png';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const CurrencyModal = () => {
     const { selectedCurrency } = useCurrency();
     const router = useRouter();
+    const { isDarkMode } = useTheme();
 
     if (!selectedCurrency) {
         return <div className={styles.backdrop}>No currency data found.</div>;
@@ -21,7 +23,7 @@ const CurrencyModal = () => {
 
     return (
         <div className={styles.backdrop}>
-            <div className={styles.modal}>
+            <div className={`${isDarkMode ? styles.modalDark : styles.modal}`}>
                 {/* Header Row */}
                 <div className={styles.modalHeader}>
                     <Image

@@ -24,7 +24,7 @@ export default function InfoImageSectionReversed() {
           {/* Text on the bottom for mobile, left for desktop */}
           <Col md={6} className="order-2 order-md-1">
             <h2 className="fw-bold mb-3 main-orange">Free template library included</h2>
-            <p className="info-description mb-4">
+            <p className="custom-text-secondary mb-4">
               We have designed our app for increased efficiency and it will help you to start getting more things done.
             </p>
             <div className="d-flex justify-content-end">
