@@ -140,7 +140,7 @@ export default function CurrenciesPage() {
                 <tbody>
                   {currencies.map((currency, index) => (
                     <tr
-                      key={currency.id}
+                      key={currency.symbol}
                       style={{ cursor: 'pointer' }}
                       onClick={() => { handleRowClick(currency) }}
                     >
