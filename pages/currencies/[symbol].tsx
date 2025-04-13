@@ -16,8 +16,8 @@ const CurrencyModal = () => {
     }
 
     const handleClose = () => {
-        // router.push('/currencies');
-        router.back(); // will return to the same scroll position
+        router.push('/currencies');
+        // router.back(); // will return to the same scroll position
 
     };
 
