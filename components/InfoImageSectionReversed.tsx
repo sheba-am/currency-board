@@ -14,7 +14,7 @@ export default function InfoImageSectionReversed() {
             <Image
               src={infoImg2}
               alt="Info Section"
-              className="rounded-circle"
+              className="rounded-circle img-fluid"
               width={400}
               height={400}
               sizes="(min-width: 768px) 400px, 100vw"

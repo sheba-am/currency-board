@@ -1,40 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Currency Board
+
+A cryptocurrency price tracker built with Next.js, React.js, TypeScript, and Bootstrap.
+This project uses the CoinGecko API to fetch real-time cryptocurrency data and display it in a user-friendly table with infinite scroll and detail views.
+
+[Live Demo](https://graceful-paletas-f65941.netlify.app/
+)
+
+
+
+
+## Features
+
+Real-time Data:
+Fetches live cryptocurrency prices and market data via CoinGecko API.
+
+Infinite Scroll:
+Smooth infinite scrolling loads more currencies as you reach the bottom of the page.
+
+Currency Detail Pop-up:
+Clicking a currency opens a detail view for more information.
+
+Responsive Design:
+Built with Bootstrap 5 for seamless desktop and mobile experiences.
+
+Persian Date Support:
+Last updated timestamps are automatically converted to Persian calendar format.
+
+Error Handling:
+Graceful fallback for network errors and CoinGecko rate limits.
+
+
+
 
 ## Getting Started
 
-First, run the development server:
+### Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+git clone https://github.com/your-username/currency-board.git
+cd currency-board
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+2. Install dependencies:
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+`npm install`
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Start the development server:
 
-## Learn More
+`npm run dev`
 
-To learn more about Next.js, take a look at the following resources:
+The app will be available at:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+http://localhost:3000
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+/components       → Reusable React components (Hero Section, Table)
+/contexts         → React Context for global state management
+/pages            → Next.js page routes (currencies list, dynamic detail page)
+/utils            → Helper functions (e.g. date conversion)
+/public           → Static assets
+
+
+
+## Technologies Used
+
+React.js
+
+Next.js
+
+TypeScript
+
+Bootstrap 5
+
+CoinGecko API
+
+## Live Demo
+
+https://graceful-paletas-f65941.netlify.app/
+
+
+
+
+
